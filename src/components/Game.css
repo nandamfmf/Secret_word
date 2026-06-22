@@ -1,0 +1,133 @@
+.Gamegeral {
+    width: 100%;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(247,251,255,0.88));
+    border: 1px solid rgba(24,50,74,0.08);
+    box-shadow: 0 18px 40px rgba(18,52,76,0.12);
+    backdrop-filter: blur(10px);
+}
+
+.Gamegeral > p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.5;
+}
+
+.Gamegeral > p:first-child {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(43, 120, 211, 0.1);
+    color: var(--brand-600);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.Gamegeral > div {
+    padding: 0.85rem 1rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(24, 50, 74, 0.06);
+}
+
+.Gamegeral > div:not(.wordContainer) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-weight: 600;
+    color: var(--text-strong);
+}
+
+.wordContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 0.55rem;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(24, 50, 74, 0.03);
+    border: 1px dashed rgba(24, 50, 74, 0.12);
+    border-radius: 16px;
+}
+
+.letter {
+    min-width: 42px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #ffffff, #f3f8ff);
+    border: 1px solid rgba(43, 120, 211, 0.12);
+    box-shadow: 0 8px 18px rgba(18, 52, 76, 0.08);
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-strong);
+    text-transform: uppercase;
+}
+
+input{
+	height: 40px;
+	width: 50px;
+}
+
+.Gamegeral > div:last-of-type {
+    padding: 0.9rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    background: rgba(255,255,255,0.8);
+}
+
+.Gamegeral > div:last-of-type span {
+    color: var(--brand-600);
+    font-weight: 700;
+}
+
+.Gamegeral button {
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    font-weight: 700;
+    width: 50%;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+    box-shadow: 0 10px 22px rgba(43, 120, 211, 0.18);
+    background: linear-gradient(90deg, var(--brand-600), var(--brand-500));
+    color: #fff;
+}
+
+.Gamegeral button:hover { opacity: 0.95; }
+.Gamegeral button:active { transform: translateY(1px); }
+
+@media (max-width: 768px) {
+    .Gamegeral { padding: 1rem; }
+
+    .Gamegeral > div:not(.wordContainer) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .letter {
+        min-width: 36px;
+        height: 46px;
+        font-size: 1.1rem;
+    }
+
+    .Gamegeral button { width: 100%; }
+
+	input{
+		width: 60px;
+		height: 40px;
+	}
+}
